@@ -1,0 +1,116 @@
+/* Basic styling for the game */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.png'); /* Update with your background image */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.game-board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+    visibility: hidden; /* Hide initially */
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    display: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.card.flipped img {
+    display: block;
+}
+
+.card.matched {
+    background-color: #4caf50;
+    border-color: #388e3c;
+    cursor: default;
+    transform: scale(1.1);
+}
+
+.card:not(.matched) {
+    transform: rotateY(0deg);
+    transition: transform 0.5s ease;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.game-info {
+    margin-top: 20px;
+    display: none; /* Hide initially */
+}
+
+.game-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#game-status {
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+#start-btn, #restart-btn, #reset-btn {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#start-btn:hover, #restart-btn:hover, #reset-btn:hover {
+    background-color: #0056b3;
+}
+
+.difficulty-selector {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+#difficulty {
+    padding: 5px;
+}
+/* Styling for the game title */
+h1 {
+    font-size: 40px; /* Adjust the size as needed */
+    margin-bottom: 20px;
+    color: #000000; /* Optional: Change the color of the title */
+}
