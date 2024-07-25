@@ -28,6 +28,10 @@ bash
 Copy code
 cd memory-game
 Open the index.html File
+## Screenshots
+
+![Focus Timer](./screenshots/memorygame.png)
+
 
 Simply open the index.html file in your preferred web browser to start playing the game.
 
